@@ -8,7 +8,7 @@ interface PortfolioItem {
   title: string;
   category: string;
   description: string;
-  image?: string;
+  image: string;
   isFeatured?: boolean;
 }
 
@@ -26,28 +26,31 @@ export default function Portofolio() {
       isFeatured: true,
     },
     {
-      id: 'resto-pos',
-      title: 'Resto POS & Cashier System',
-      category: 'Sistem Kasir & Manajemen Pesanan',
+      id: 'rvhshop',
+      title: 'E-Commerce Gaming Gear',
+      category: 'Toko Online Gaming',
       description:
-        'Aplikasi web manajemen kasir resto dengan sistem pencatatan stok, laporan penjualan harian, dan pembayaran QRIS.',
-      isFeatured: false,
+        'Website toko online aksesoris & peralatan gaming (Headphone Gaming Rexus, Mouse, Keyboard, Gaming Chair) dengan katalog produk eksklusif, penawaran harga promo, dan integrasi metode pembayaran lengkap (Bank Transfer, QRIS, e-Wallet).',
+      image: '/rvhshop-portfolio.png',
+      isFeatured: true,
     },
     {
-      id: 'company-prof',
-      title: 'Corporate Profile Business',
-      category: 'Profil Perusahaan Responsive',
+      id: 'resyin-dev',
+      title: 'Personal Portfolio Web',
+      category: 'Developer Portfolio',
       description:
-        'Website profil perusahaan profesional untuk meningkatkan kredibilitas brand dengan galeri proyek dan formulir kontak.',
-      isFeatured: false,
+        'Website portofolio pengembang web frontend dengan showcase keahlian teknologi modern (HTML5, CSS3, JavaScript, React, TypeScript, Tailwind CSS), daftar proyek pilihan, dan tautan sosial media profesional.',
+      image: '/resyin-portfolio.png',
+      isFeatured: true,
     },
     {
-      id: 'custom-app',
-      title: 'Custom Web Application',
-      category: 'Aplikasi Web Fitur Khusus',
+      id: 'mobile-pos',
+      title: 'F&B POS & Digital Menu App',
+      category: 'Aplikasi Kasir Mobile & Menu POS',
       description:
-        'Sistem web dinamis yang disesuaikan dengan alur kerja bisnis spesifik klien dengan arsitektur cepat & aman.',
-      isFeatured: false,
+        'Aplikasi kasir & menu digital berbasis web versi mobile untuk usaha kafe & restoran, dilengkapi dengan sistem pesanan otomatis, katalog menu interaktif dengan filter kategori, banner promo voucher, dan pencatatan transaksi real-time.',
+      image: '/mobile-pos-portfolio.png',
+      isFeatured: true,
     },
   ];
 
@@ -78,38 +81,22 @@ export default function Portofolio() {
                 <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
               </div>
               <span className="text-[10px] font-extrabold tracking-wider uppercase text-blacksoft bg-white/70 px-2 py-0.5 rounded-full">
-                {item.isFeatured ? 'Project Featured' : 'Preview'}
+                Featured Project
               </span>
             </div>
 
             {/* Thumbnail Preview Area */}
             <div className="relative min-h-[220px] bg-gradient-to-b from-yellowsoft/30 via-yellow-100/40 to-limesoft/30 overflow-hidden flex items-center justify-center p-3">
-              {item.image ? (
-                <div className="relative w-full h-[200px] rounded-xl overflow-hidden shadow border border-gray-200/80 bg-white">
-                  <Image
-                    src={item.image}
-                    alt={`Preview website ${item.title}`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 300px"
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
-                </div>
-              ) : (
-                <div className="w-full h-full p-4 flex flex-col justify-between w-full" aria-hidden="true">
-                  <div className="bg-white/90 backdrop-blur rounded-xl p-3 shadow-sm mb-3">
-                    <div className="w-1/2 h-3 bg-gray-300 rounded mb-2"></div>
-                    <div className="w-full h-2 bg-gray-200 rounded mb-1"></div>
-                    <div className="w-3/4 h-2 bg-gray-200 rounded"></div>
-                  </div>
-                  <div className="grid grid-cols-4 gap-1.5">
-                    <div className="h-10 rounded-lg bg-yellow-200 border border-yellow-300"></div>
-                    <div className="h-10 rounded-lg bg-yellow-200 border border-yellow-300"></div>
-                    <div className="h-10 rounded-lg bg-yellow-200 border border-yellow-300"></div>
-                    <div className="h-10 rounded-lg bg-yellow-200 border border-yellow-300"></div>
-                  </div>
-                </div>
-              )}
+              <div className="relative w-full h-[200px] rounded-xl overflow-hidden shadow border border-gray-200/80 bg-white">
+                <Image
+                  src={item.image}
+                  alt={`Preview website ${item.title}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 300px"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+              </div>
             </div>
 
             {/* Card Content Info */}
@@ -157,21 +144,15 @@ export default function Portofolio() {
 
             {/* Modal Body */}
             <div className="p-6 space-y-6 max-h-[75vh] overflow-y-auto">
-              {selectedItem.image ? (
-                <div className="relative w-full rounded-2xl overflow-hidden shadow-md border border-gray-200">
-                  <Image
-                    src={selectedItem.image}
-                    alt={`Detail tampilan ${selectedItem.title}`}
-                    width={800}
-                    height={1600}
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-              ) : (
-                <div className="bg-gray-100 rounded-2xl p-8 text-center text-gray-500 font-medium">
-                  Mockup pratinjau interaktif
-                </div>
-              )}
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-md border border-gray-200 max-h-[450px] overflow-y-auto bg-gray-50">
+                <Image
+                  src={selectedItem.image}
+                  alt={`Detail tampilan ${selectedItem.title}`}
+                  width={800}
+                  height={2400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
 
               <div className="space-y-3">
                 <h4 className="text-base font-extrabold text-blacksoft">Deskripsi Proyek:</h4>
@@ -182,10 +163,10 @@ export default function Portofolio() {
 
               <div className="pt-2 flex flex-wrap gap-4">
                 <a
-                  href="https://wa.me/6282229535137?text=Halo%20RESYIN%20DEV,%20saya%20tertarik%20dengan%20desain%20website%20seperti%20"
+                  href={`https://wa.me/6282229535137?text=Halo%20RESYIN%20DEV,%20saya%20tertarik%20dengan%20desain%20website%20seperti%20${encodeURIComponent(selectedItem.title)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Pesan website mirip ini"
+                  aria-label="Pesan website mirip ini via WhatsApp"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-yellowsoft hover:bg-yellow-400 text-blacksoft font-extrabold text-sm shadow transition-transform transform hover:-translate-y-0.5"
                 >
                   <span>Pesan Website Seperti Ini</span>
