@@ -13,8 +13,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Layanan />
-      <AlurKerja />
       <Harga />
+      <AlurKerja />
       <Portofolio />  
       <Kontak />
       <Footer />
