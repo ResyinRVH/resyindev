@@ -30,7 +30,6 @@ export default function AlurKerja() {
       <div className="mb-10 text-left">
         <div className="inline-flex items-center gap-2">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-blacksoft">Alur Kerja</h2>
-          <span className="w-3 h-3 rounded-full bg-limesoft inline-block"></span>
         </div>
       </div>
 

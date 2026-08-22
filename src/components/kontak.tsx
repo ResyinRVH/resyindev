@@ -1,10 +1,14 @@
+import { WhatsApp } from "@/lib/whatsapp";
+import {
+  TikTok
+
+} from "@/lib/instagram";
 export default function Kontak() {
   return (
     <section id="kontak" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-10 text-left">
         <div className="inline-flex items-center gap-2">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-blacksoft">Kontak</h2>
-          <span className="w-3 h-3 rounded-full bg-limesoft inline-block"></span>
         </div>
       </div>
 
@@ -14,8 +18,12 @@ export default function Kontak() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Hubungi kami via Whatsapp"
-          className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-limesoft hover:bg-lime-400 text-blacksoft font-extrabold text-base shadow-md transition-all transform hover:-translate-y-0.5 focus:ring-2 focus:ring-blacksoft"
+          className="inline-flex items-center gap-3 px-8 py-2 rounded-lg bg-limesoft hover:bg-lime-400 text-blacksoft font-extrabold text-base shadow-md transition-all transform hover:-translate-y-0.5 focus:ring-2 focus:ring-blacksoft"
         >
+          <div className="rounded-full bg-white p-2">
+            <WhatsApp className="w-5 h-5" />
+          </div>
+
           <span>Whatsapp</span>
         </a>
 
@@ -24,8 +32,11 @@ export default function Kontak() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Kunjungi TikTok RESYIN DEV"
-          className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-limesoft hover:bg-lime-400 text-blacksoft font-extrabold text-base shadow-md transition-all transform hover:-translate-y-0.5 focus:ring-2 focus:ring-blacksoft"
+          className="inline-flex items-center gap-3 px-8 py-2 rounded-lg bg-limesoft hover:bg-lime-400 text-blacksoft font-extrabold text-base shadow-md transition-all transform hover:-translate-y-0.5 focus:ring-2 focus:ring-blacksoft"
         >
+          <div className="rounded-full bg-white p-2">
+            <TikTok className="w-5 h-5" />
+          </div>
           <span>Tiktok</span>
         </a>
       </div>

@@ -37,7 +37,6 @@ export default function Layanan() {
       <div className="mb-10 text-left">
         <div className="inline-flex items-center gap-2">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-blacksoft">Layanan</h2>
-          <span className="w-3 h-3 rounded-full bg-limesoft inline-block"></span>
         </div>
       </div>
 
@@ -47,7 +46,7 @@ export default function Layanan() {
             key={index}
             className={`rounded-3xl p-8 transition-all hover:shadow-xl flex flex-col justify-between ${
               item.isGreen
-                ? 'bg-limesoft text-blacksoft'
+                ? 'bg-radial-[at_0%_200%] from-yellowsoft to-limesoft text-blacksoft'
                 : 'bg-white text-blacksoft border border-gray-200 shadow-sm'
             }`}
           >

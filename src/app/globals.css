@@ -9,6 +9,7 @@
   --color-limesoft: #8ECA3C;
   --color-blacksoft: #2D2D2D;
   --color-yellowsoft: #E5E800;
+  --radius-5xl: 5rem;
 }
 
 @theme inline {

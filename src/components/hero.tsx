@@ -11,12 +11,9 @@ export default function Hero() {
 
   return (
     <section id="beranda" className="px-4 sm:px-6 lg:px-8 pt-4 pb-12">
-      <div className="max-w-7xl mx-auto bg-limesoft rounded-[2.5rem] p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-xl">
-        {/* Decorative pattern */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]"></div>
+      <div className="max-w-7xl mx-auto bg-radial-[at_100%_150%] from-yellowsoft to-limesoft rounded-[2.5rem] p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-xl">
 
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* Left Content Column */}
           <div className="lg:col-span-7 space-y-6 text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-blacksoft tracking-tight leading-tight">
               {heroData.headline}
@@ -37,24 +34,20 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Image Frame Column */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-sm sm:max-w-md">
-              {/* Profile Image Frame with exact intrinsic aspect ratio 290:367 */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-blacksoft aspect-[290/367] group border-2 border-white/20">
+              <div className="relative rounded-5xl overflow-hidden shadow-2xl bg-blacksoft aspect-[290/367] group outline-4 outline-offset-4 outline-white">
                 <Image
                   src="/profile.svg"
                   alt="Foto Professional Website Developer RESYIN DEV"
                   width={290}
                   height={367}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 350px"
-                  className="w-full h-full object-cover rounded-3xl group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-blacksoft/40 via-transparent to-transparent"></div>
               </div>
 
-              {/* Floating Badge Overlay at Bottom Right */}
               <div className="absolute -bottom-4 right-2 sm:right-4 bg-blacksoft p-2.5 pr-4 rounded-full border border-white/10 shadow-2xl flex items-center space-x-3 text-white">
                 <div className="w-10 h-10 rounded-full bg-limesoft text-blacksoft flex items-center justify-center font-extrabold">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">

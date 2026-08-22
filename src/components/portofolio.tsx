@@ -59,7 +59,6 @@ export default function Portofolio() {
       <div className="mb-10 text-left">
         <div className="inline-flex items-center gap-2">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-blacksoft">Portofolio</h2>
-          <span className="w-3 h-3 rounded-full bg-limesoft inline-block"></span>
         </div>
         <p className="text-sm font-medium text-slate-700 mt-2">
           Lihat beberapa contoh hasil pembuatan website profesional yang telah kami kerjakan.
@@ -73,8 +72,7 @@ export default function Portofolio() {
             onClick={() => setSelectedItem(item)}
             className="bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-md hover:shadow-xl transition-all cursor-pointer group flex flex-col justify-between transform hover:-translate-y-1"
           >
-            {/* Header Browser Window Bar */}
-            <div className="bg-yellowsoft p-3.5 border-b border-yellow-400/30 flex items-center justify-between">
+            <div className="bg-radial-[at_0%_100%] from-yellowsoft to-limesoft p-3.5 border-b border-yellow-400/30 flex items-center justify-between">
               <div className="flex items-center space-x-1.5" aria-hidden="true">
                 <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
                 <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
@@ -85,7 +83,6 @@ export default function Portofolio() {
               </span>
             </div>
 
-            {/* Thumbnail Preview Area */}
             <div className="relative min-h-[220px] bg-gradient-to-b from-yellowsoft/30 via-yellow-100/40 to-limesoft/30 overflow-hidden flex items-center justify-center p-3">
               <div className="relative w-full h-[200px] rounded-xl overflow-hidden shadow border border-gray-200/80 bg-white">
                 <Image
@@ -99,7 +96,6 @@ export default function Portofolio() {
               </div>
             </div>
 
-            {/* Card Content Info */}
             <div className="p-5 bg-white text-left">
               <h3 className="font-extrabold text-blacksoft text-base group-hover:text-blacksoft/80 transition-colors">
                 {item.title}
@@ -116,7 +112,6 @@ export default function Portofolio() {
         ))}
       </div>
 
-      {/* Interactive Modal Lightbox Preview */}
       {selectedItem && (
         <div
           className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm p-4 sm:p-6 md:p-10 flex items-center justify-center overflow-y-auto"
@@ -126,7 +121,6 @@ export default function Portofolio() {
             className="bg-white rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl relative my-auto animate-in zoom-in-95 duration-200 text-left"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Modal Header */}
             <div className="bg-limesoft p-5 flex items-center justify-between text-blacksoft border-b border-blacksoft/10">
               <div>
                 <h3 className="text-xl font-extrabold">{selectedItem.title}</h3>
@@ -142,7 +136,6 @@ export default function Portofolio() {
               </button>
             </div>
 
-            {/* Modal Body */}
             <div className="p-6 space-y-6 max-h-[75vh] overflow-y-auto">
               <div className="relative w-full rounded-2xl overflow-hidden shadow-md border border-gray-200 max-h-[450px] overflow-y-auto bg-gray-50">
                 <Image
