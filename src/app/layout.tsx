@@ -28,15 +28,15 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "RESYIN DEV - Jasa Pembuatan Website & SEO Professional",
+  title: "Jasa Pembuatan Website & SEO Professional di Jombang | Resyin Dev",
   description:
-    "Buat brand bisnismu jadi lebih profesional, dapat meningkatkan penjualan dan tingkatkan kepercayaan pelanggan dengan website SEO terpercaya dari RESYIN DEV.",
+    "Jasa pembuatan website dan SEO profesional, terjangkau, dan responsif di Jombang. Melayani pembuatan landing page, web portofolio, toko online, dan sistem web kustom.",
   keywords: [
-    "jasa pembuatan website",
+    "jasa pembuatan website dan seo di jombang",
     "seo professional",
-    "website toko online",
-    "company profile",
-    "digital menu",
+    "jasa bikin web jombang",
+    "jasa pembuatan web jombang",
+    "jasa bikin website di jombang",
     "resyin dev",
   ],
   authors: [{ name: "RESYIN DEV" }],
@@ -46,10 +46,10 @@ export const metadata: Metadata = {
     apple: "/favicon.ico",
   },
   openGraph: {
-    title: "RESYIN DEV - Jasa Pembuatan Website & SEO Professional",
+    title: "Jasa Pembuatan Website di Jombang - Resyin Dev",
     description:
-      "Buat brand bisnismu jadi lebih profesional, dapat meningkatkan penjualan dan tingkatkan kepercayaan pelanggan dengan website SEO.",
-    type: "website",
+      "Solusi pembuatan website modern, cepat, dan SEO-friendly untuk bisnis & UMKM di Jombang dan sekitarnya.",
+    url: 'https://resyindev.web.id',
     locale: "id_ID",
     siteName: "RESYIN DEV",
   },
@@ -64,6 +64,22 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'Jasa Pembuatan Website dan seo profesional di Jombang - Resyin Dev',
+    url: 'https://resyindev.web.id',
+    telephone: '+62 822-2953-5137',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Jombang',
+      addressRegion: 'Jawa Timur',
+      addressCountry: 'ID',
+    },
+    areaServed: 'Jombang',
+    priceRange: '$$',
+    description: 'Jasa pembuatan website dan seo profesional di Jombang Jawa Timur.',
+  }
   return (
     <html
       lang="id"
