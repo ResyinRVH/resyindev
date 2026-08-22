@@ -22,7 +22,7 @@ export default function Portofolio() {
       category: 'Landing Page Kuliner & Digital Menu',
       description:
         'Website pemesanan makanan & menu digital interaktif dengan fitur form pemesanan WhatsApp, pilihan menu soto & rawon, galeri foto kuliner, dan ulasan pelanggan.',
-      image: '/wmj-portfolio.png',
+      image: '/wmj-portfolio.webp',
       isFeatured: true,
     },
     {
@@ -31,7 +31,7 @@ export default function Portofolio() {
       category: 'Toko Online Gaming',
       description:
         'Website toko online aksesoris & peralatan gaming (Headphone Gaming Rexus, Mouse, Keyboard, Gaming Chair) dengan katalog produk eksklusif, penawaran harga promo, dan integrasi metode pembayaran lengkap (Bank Transfer, QRIS, e-Wallet).',
-      image: '/rvhshop-portfolio.png',
+      image: '/rvhshop-portfolio.webp',
       isFeatured: true,
     },
     {
@@ -40,7 +40,7 @@ export default function Portofolio() {
       category: 'Developer Portfolio',
       description:
         'Website portofolio pengembang web frontend dengan showcase keahlian teknologi modern (HTML5, CSS3, JavaScript, React, TypeScript, Tailwind CSS), daftar proyek pilihan, dan tautan sosial media profesional.',
-      image: '/resyin-portfolio.png',
+      image: '/resyin-portfolio.webp',
       isFeatured: true,
     },
     {
@@ -49,7 +49,7 @@ export default function Portofolio() {
       category: 'Aplikasi Kasir Mobile & Menu POS',
       description:
         'Aplikasi kasir & menu digital berbasis web versi mobile untuk usaha kafe & restoran, dilengkapi dengan sistem pesanan otomatis, katalog menu interaktif dengan filter kategori, banner promo voucher, dan pencatatan transaksi real-time.',
-      image: '/mobile-pos-portfolio.png',
+      image: '/mobile-pos-portfolio.webp',
       isFeatured: true,
     },
   ];
