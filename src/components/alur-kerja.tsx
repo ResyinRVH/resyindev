@@ -38,7 +38,7 @@ export default function AlurKerja() {
           {stepsRow1.map((step, index) => (
             <div
               key={index}
-              className="bg-limesoft rounded-3xl p-8 text-blacksoft text-left shadow-md hover:shadow-xl transition-all"
+              className="bg-radial-[at_0%_200%] from-yellowsoft to-limesoft rounded-3xl p-8 text-blacksoft text-left shadow-md hover:shadow-xl transition-all"
             >
               <h3 className="text-2xl font-black mb-3 text-blacksoft">{step.title}</h3>
               <p className="text-sm font-semibold leading-relaxed text-blacksoft">
@@ -52,7 +52,7 @@ export default function AlurKerja() {
           {stepsRow2.map((step, index) => (
             <div
               key={index}
-              className="bg-limesoft rounded-3xl p-8 text-blacksoft text-left shadow-md hover:shadow-xl transition-all"
+              className="bg-radial-[at_0%_200%] from-yellowsoft to-limesoft rounded-3xl p-8 text-blacksoft text-left shadow-md hover:shadow-xl transition-all"
             >
               <h3 className="text-2xl font-black mb-3 text-blacksoft">{step.title}</h3>
               <p className="text-sm font-semibold leading-relaxed text-blacksoft">

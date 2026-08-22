@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="w-full bg-limesoft mt-16 py-12 text-blacksoft">
+    <footer className="w-full bg-radial-[at_200%_200%] from-yellowsoft to-limesoft mt-16 py-12 text-blacksoft">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-left">

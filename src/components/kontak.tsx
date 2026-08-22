@@ -18,7 +18,7 @@ export default function Kontak() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Hubungi kami via Whatsapp"
-          className="inline-flex items-center gap-3 px-8 py-2 rounded-lg bg-limesoft hover:bg-lime-400 text-blacksoft font-extrabold text-base shadow-md transition-all transform hover:-translate-y-0.5 focus:ring-2 focus:ring-blacksoft"
+          className="inline-flex items-center gap-3 px-8 py-2 rounded-lg bg-radial-[at_0%_200%] from-yellowsoft to-limesoft hover:bg-lime-400 text-blacksoft font-extrabold text-base shadow-md transition-all transform hover:-translate-y-0.5 focus:ring-2 focus:ring-blacksoft"
         >
           <div className="rounded-full bg-white p-2">
             <WhatsApp className="w-5 h-5" />
@@ -32,7 +32,7 @@ export default function Kontak() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Kunjungi TikTok RESYIN DEV"
-          className="inline-flex items-center gap-3 px-8 py-2 rounded-lg bg-limesoft hover:bg-lime-400 text-blacksoft font-extrabold text-base shadow-md transition-all transform hover:-translate-y-0.5 focus:ring-2 focus:ring-blacksoft"
+          className="inline-flex items-center gap-3 px-8 py-2 rounded-lg bg-radial-[at_0%_200%] from-yellowsoft to-limesoft hover:bg-lime-400 text-blacksoft font-extrabold text-base shadow-md transition-all transform hover:-translate-y-0.5 focus:ring-2 focus:ring-blacksoft"
         >
           <div className="rounded-full bg-white p-2">
             <TikTok className="w-5 h-5" />

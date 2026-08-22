@@ -71,7 +71,7 @@ export default function Harga() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Pilih ${pkg.name} via WhatsApp`}
-              className="block w-full text-center py-3.5 px-6 rounded-2xl bg-limesoft hover:bg-lime-400 text-white font-extrabold transition shadow-sm focus:ring-2 focus:ring-blacksoft"
+              className="block w-full text-center py-3.5 px-6 rounded-2xl bg-limesoft hover:bg-lime-400 text-blacksoft font-extrabold transition shadow-sm focus:ring-2 focus:ring-blacksoft"
             >
               Pilih Paket
             </a>

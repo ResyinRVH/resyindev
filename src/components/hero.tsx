@@ -35,7 +35,7 @@ export default function Hero() {
           </div>
 
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-sm sm:max-w-md">
+            <div className="relative max-w-sm sm:max-w-md">
               <div className="relative rounded-5xl overflow-hidden shadow-2xl bg-blacksoft aspect-[290/367] group outline-4 outline-offset-4 outline-white">
                 <Image
                   src="/profile.webp"
