@@ -9,14 +9,17 @@ export default function Footer() {
               Jasa Pembuatan Website & SEO Professional
             </p>
           </div>
-          <nav className="flex items-center space-x-6 text-sm font-extrabold text-blacksoft" aria-label="Navigasi Footer">
+          <footer
+            className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-extrabold text-blacksoft"
+            aria-label="Navigasi Footer"
+          >
             <a href="#beranda" className="hover:underline">Beranda</a>
             <a href="#layanan" className="hover:underline">Layanan</a>
             <a href="#portofolio" className="hover:underline">Portofolio</a>
             <a href="#harga" className="hover:underline">Harga</a>
             <a href="#alur-kerja" className="hover:underline">Alur Kerja</a>
             <a href="#kontak" className="hover:underline">Kontak</a>
-          </nav>
+          </footer>
         </div>
         <div className="border-t border-blacksoft/20 mt-8 pt-6 text-center text-xs font-bold text-blacksoft">
           &copy; 2026 RESYIN DEV. All rights reserved.
