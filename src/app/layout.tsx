@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     "Jasa pembuatan website dan SEO profesional, terjangkau, dan responsif di Jombang. Melayani pembuatan landing page, web portofolio, toko online, dan sistem web kustom.",
   keywords: [
     "jasa pembuatan website dan seo di jombang",
+    "jasa pembuatan website peterongan",
+    "jasa pembuatan website di peterongan",
+    "jasa pembuatan web peterongan",
     "seo professional",
     "jasa bikin web jombang",
     "jasa pembuatan web jombang",
