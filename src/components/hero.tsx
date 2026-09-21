@@ -1,42 +1,88 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { motion, type Variants} from "framer-motion";
 
 export default function Hero() {
   const heroData = {
-    headline: "Jasa Pembuatan Website dan SEO Professional",
     description:
       "Buat brand bisnismu jadi lebih profesional, dapat meningkatkan penjualan dan tingkatkan kepercayaan pelanggan dengan website SEO.",
     konsul: "Konsultasi Gratis Sekarang!",
   };
 
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.18,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 25 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
   return (
     <section id="beranda" className="px-4 sm:px-6 lg:px-8 pt-4 pb-12">
-      <div className="max-w-7xl mx-auto bg-radial-[at_100%_150%] from-yellowsoft to-limesoft rounded-[2.5rem] p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-xl">
-
+      <div className="max-w-7xl mx-auto p-8 sm:p-12 lg:p-16 relative overflow-hidden">
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          <div className="lg:col-span-7 space-y-6 text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-blacksoft tracking-tight leading-tight">
-              {heroData.headline}
-            </h1>
-            <p className="text-base sm:text-lg font-medium text-blacksoft max-w-xl leading-relaxed">
+          
+          <motion.div
+            className="lg:col-span-7 space-y-6 text-left"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.h1
+              variants={itemVariants}
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-blacksoft tracking-tight leading-tight"
+            >
+              Jasa Pembuatan{" "}
+              <span className="bg-gradient-to-r from-limesoft to-darkgreen bg-clip-text text-transparent">
+                Website dan SEO
+              </span>{" "}
+              Professional
+            </motion.h1>
+
+            <motion.p
+              variants={itemVariants}
+              className="text-base sm:text-lg font-medium text-blacksoft max-w-xl leading-relaxed"
+            >
               {heroData.description}
-            </p>
-            <div className="pt-2">
+            </motion.p>
+
+            <motion.div variants={itemVariants} className="pt-2">
               <Link
                 href="https://wa.me/6282229535137?text=Halo%20RESYIN%20DEV,%20saya%20ingin%20konsultasi%20pembuatan%20website"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Konsultasi Gratis Sekarang via WhatsApp"
-                className="inline-flex items-center justify-center bg-yellowsoft text-blacksoft font-extrabold text-sm sm:text-base px-7 py-3.5 rounded-full hover:bg-yellow-300 transition-all shadow-md transform hover:-translate-y-0.5 focus:ring-2 focus:ring-blacksoft"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-limesoft to-darkgreen text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-xl hover:bg-lime-300 transition-all shadow-md transform hover:-translate-y-0.5 focus:ring-2 focus:ring-blacksoft"
               >
                 {heroData.konsul}
               </Link>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="lg:col-span-5 flex justify-center">
+          <motion.div
+            className="lg:col-span-5 flex justify-center"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          >
             <div className="relative max-w-sm sm:max-w-md">
-              <div className="relative rounded-5xl overflow-hidden shadow-2xl bg-blacksoft aspect-[290/367] group outline-4 outline-offset-4 outline-white">
+              <div className="relative rounded-5xl overflow-hidden shadow-2xl bg-blacksoft aspect-[290/367] group outline-4 outline-offset-4 outline-limesoft">
                 <Image
                   src="/profile.webp"
                   alt="Foto Professional Website Developer RESYIN DEV"
@@ -48,28 +94,40 @@ export default function Hero() {
                 />
               </div>
 
-              <div className="absolute -bottom-4 right-2 sm:right-4 bg-blacksoft p-2.5 pr-4 rounded-full border border-white/10 shadow-2xl flex items-center space-x-3 text-white">
-                <div className="w-10 h-10 rounded-full bg-limesoft text-blacksoft flex items-center justify-center font-extrabold">
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="absolute bottom-5 right-21 sm:right-16 bg-blacksoft px-4 py-2.5 gap-7 rounded-xl shadow-md flex items-center space-x-3 text-white"
+              >
                 <div className="text-left">
                   <p className="text-[11px] text-gray-200 font-medium leading-none">Cek</p>
-                  <p className="text-xs font-bold text-yellowsoft mt-0.5">Portofolio Kami</p>
+                  <p className="text-xs font-bold text-limesoft mt-0.5">Portofolio Kami</p>
                 </div>
                 <a
                   href="#portofolio"
-                  className="w-9 h-9 rounded-full bg-yellowsoft text-blacksoft flex items-center justify-center hover:bg-yellow-300 transition-colors shadow"
+                  className="w-9 h-9 rounded-full bg-gradient-to-r from-limesoft to-darkgreen text-white flex items-center justify-center hover:bg-yellow-300 transition-colors shadow"
                   aria-label="Lihat Portofolio Kami"
                 >
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2.5}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
                   </svg>
                 </a>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
+
         </div>
       </div>
     </section>
