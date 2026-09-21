@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
 
 const navItems = [
   { name: 'Beranda', href: '#beranda' },
@@ -18,6 +17,23 @@ export default function Navbar() {
   const [lineStyle, setLineStyle] = useState({ left: 0, width: 0, opacity: 0 });
   const navRef = useRef<HTMLElement | null>(null);
   const itemRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
+
+  // Fungsi khusus untuk menggulir mulus ke Hero/Beranda saat logo diklik
+  const scrollToBeranda = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsOpen(false);
+    setActiveSection('beranda');
+
+    const heroElement = document.getElementById('beranda');
+    if (heroElement) {
+      heroElement.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Perbarui URL tanpa reload
+    window.history.pushState(null, '', '#beranda');
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -65,17 +81,19 @@ export default function Navbar() {
   }, [activeSection]);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#F9FAFF]/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 bg-[#F9FAFF]/95 backdrop-blur-md border-b border-gray-100/80">
       <div className="max-w-7xl mx-auto px-6 sm:px-12">
         <div className="flex items-center justify-between h-20">
-          <Link
+          
+          {/* Logo RESYIN DEV yang mengarah ke Beranda/Hero */}
+          <a
             href="#beranda"
-            onClick={() => setIsOpen(false)}
-            className="text-2xl font-extrabold tracking-wider text-blacksoft flex items-center gap-1.5 hover:opacity-90 transition-opacity"
-            aria-label="RESYIN DEV Beranda"
+            onClick={scrollToBeranda}
+            className="text-2xl font-extrabold tracking-wider text-blacksoft flex items-center gap-1.5 hover:opacity-80 transition-opacity cursor-pointer select-none"
+            aria-label="RESYIN DEV Kembali ke Beranda"
           >
             <span>RESYIN DEV</span>
-          </Link>
+          </a>
 
           <nav
             ref={navRef}
@@ -93,8 +111,9 @@ export default function Navbar() {
                     itemRefs.current[sectionId] = el;
                   }}
                   href={item.href}
+                  onClick={() => setActiveSection(sectionId)}
                   className={`text-[15px] font-semibold transition-colors duration-300 ${
-                    isActive ? 'text-blacksoft' : 'text-gray-500 hover:text-limesoft'
+                    isActive ? 'text-blacksoft font-bold' : 'text-gray-500 hover:text-blacksoft'
                   }`}
                 >
                   {item.name}
@@ -102,8 +121,9 @@ export default function Navbar() {
               );
             })}
 
+            {/* Garis Indikator Aktif */}
             <span
-              className="absolute bottom-0 h-[3px] bg-limesoft rounded-full transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] pointer-events-none"
+              className="absolute bottom-0 h-[3px] bg-gradient-to-r from-limesoft to-darkgreen rounded-full transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] pointer-events-none"
               style={{
                 left: `${lineStyle.left}px`,
                 width: `${lineStyle.width}px`,
@@ -112,6 +132,7 @@ export default function Navbar() {
             />
           </nav>
 
+          {/* Tombol Hamburger Mobile */}
           <button
             type="button"
             aria-label={isOpen ? 'Tutup menu navigasi' : 'Buka menu navigasi'}
@@ -132,6 +153,7 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Menu Mobile */}
       {isOpen && (
         <div className="md:hidden border-t border-gray-200 bg-white px-6 py-4 shadow-lg animate-in slide-in-from-top-2 duration-200">
           <ul className="flex flex-col gap-2">
@@ -142,7 +164,10 @@ export default function Navbar() {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      setIsOpen(false);
+                      setActiveSection(item.href.replace('#', ''));
+                    }}
                     className={`block py-2.5 px-3 rounded-lg text-base font-semibold transition-all duration-300 ${
                       isActive
                         ? 'bg-limesoft/30 text-blacksoft font-bold border-l-4 border-limesoft'

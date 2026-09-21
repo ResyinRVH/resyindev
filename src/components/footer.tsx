@@ -1,16 +1,16 @@
 export default function Footer() {
   return (
-    <footer className="w-full bg-radial-[at_200%_200%] from-yellowsoft to-limesoft mt-16 py-12 text-blacksoft">
+    <footer className="w-full bg-gradient-to-r from-limesoft to-darkgreen mt-16 py-12 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-left">
-            <p className="text-2xl font-black text-blacksoft">RESYIN DEV</p>
-            <p className="text-sm font-semibold text-blacksoft/90 mt-1">
+            <p className="text-2xl font-black text-white">RESYIN DEV</p>
+            <p className="text-sm font-semibold text-white/90 mt-1">
               Jasa Pembuatan Website & SEO Professional
             </p>
           </div>
           <footer
-            className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-extrabold text-blacksoft"
+            className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-extrabold text-white"
             aria-label="Navigasi Footer"
           >
             <a href="#beranda" className="hover:underline">Beranda</a>
@@ -21,7 +21,7 @@ export default function Footer() {
             <a href="#kontak" className="hover:underline">Kontak</a>
           </footer>
         </div>
-        <div className="border-t border-blacksoft/20 mt-8 pt-6 text-center text-xs font-bold text-blacksoft">
+        <div className="border-t border-blacksoft/20 mt-8 pt-6 text-center text-xs font-bold text-white">
           &copy; 2026 RESYIN DEV. All rights reserved.
         </div>
       </div>
