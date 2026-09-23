@@ -2,11 +2,11 @@ import dynamic from "next/dynamic";
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
 
-const Layanan = dynamic(() => import("@/components/layanan"));
-const Harga = dynamic(() => import("@/components/harga"));
-const AlurKerja = dynamic(() => import("@/components/alur-kerja"));
-const Portofolio = dynamic(() => import("@/components/portofolio"));
-const Kontak = dynamic(() => import("@/components/kontak"));
+const Layanan = dynamic(() => import("@/components/layanan"), { ssr: false });
+const Harga = dynamic(() => import("@/components/harga"), { ssr: false });
+const AlurKerja = dynamic(() => import("@/components/alur-kerja"), { ssr: false });
+const Portofolio = dynamic(() => import("@/components/portofolio"), { ssr: false });
+const Kontak = dynamic(() => import("@/components/kontak"), { ssr: false });
 const Footer = dynamic(() => import("@/components/footer"));
 
 export default function Home() {
