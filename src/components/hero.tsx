@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion, type Variants} from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 export default function Hero() {
   const heroData = {
@@ -16,19 +16,19 @@ export default function Hero() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.18,
+        staggerChildren: 0.15,
       },
     },
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 25 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.7,
-        ease: [0.22, 1, 0.36, 1],
+        duration: 0.5,
+        ease: "easeOut",
       },
     },
   };
@@ -75,30 +75,26 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          <motion.div
-            className="lg:col-span-5 flex justify-center"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          >
-            <div className="relative max-w-sm sm:max-w-md">
+          <div className="lg:col-span-5 flex justify-center">
+            <div className="relative max-w-sm sm:max-w-md w-full">
               <div className="relative rounded-5xl overflow-hidden shadow-2xl bg-blacksoft aspect-[290/367] group outline-4 outline-offset-4 outline-limesoft">
                 <Image
                   src="/profile.webp"
                   alt="Foto Professional Website Developer RESYIN DEV"
-                  width={290}
-                  height={367}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 350px"
+                  width={316}
+                  height={400}
+                  sizes="(max-width: 640px) 316px, (max-width: 1024px) 380px, 350px"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   priority
+                  quality={80}
                 />
               </div>
 
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="absolute bottom-5 right-21 sm:right-16 bg-blacksoft px-4 py-2.5 gap-7 rounded-xl shadow-md flex items-center space-x-3 text-white"
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="absolute bottom-5 right-20 sm:right-30 bg-blacksoft px-4 py-2.5 gap-7 rounded-xl shadow-md flex items-center space-x-3 text-white z-20"
               >
                 <div className="text-left">
                   <p className="text-[11px] text-gray-200 font-medium leading-none">Cek</p>
@@ -126,7 +122,7 @@ export default function Hero() {
                 </a>
               </motion.div>
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>
