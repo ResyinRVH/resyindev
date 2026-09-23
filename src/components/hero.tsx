@@ -37,7 +37,7 @@ export default function Hero() {
     <section id="beranda" className="px-4 sm:px-6 lg:px-8 pt-4 pb-12">
       <div className="max-w-7xl mx-auto p-8 sm:p-12 lg:p-16 relative overflow-hidden">
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          
+
           <motion.div
             className="lg:col-span-7 space-y-6 text-left"
             variants={containerVariants}
@@ -78,15 +78,17 @@ export default function Hero() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative max-w-sm sm:max-w-md w-full">
               <div className="relative rounded-5xl overflow-hidden shadow-2xl bg-blacksoft aspect-[290/367] group outline-4 outline-offset-4 outline-limesoft">
+                import Image from "next/image";
+
                 <Image
                   src="/profile.webp"
                   alt="Foto Professional Website Developer RESYIN DEV"
                   width={316}
                   height={400}
-                  sizes="(max-width: 640px) 316px, (max-width: 1024px) 380px, 350px"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 320px, (max-width: 1024px) 380px, 350px"
                   priority
-                  quality={80}
+                  quality={75}
+                  className="w-full h-full object-cover"
                 />
               </div>
 
